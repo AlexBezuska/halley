@@ -1,0 +1,175 @@
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:100|Roboto:100,300|Allan);
+/*
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Allan', cursive;
+*/
+//@import 'bourbon/bourbon';
+
+$goodnight-moon: #FCF9C4;
+$attacke: rgba(233,245,140, 1);
+$HalleyDirtyYellow: rgba(182,204,122, 1);
+$Estelaverda: rgba(146,186,128, 1);
+$Verdtirantgris: rgba(124,166,131, 1);
+$digitize: rgba(130,153,143, 1);
+
+
+* {-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+//@include box-sizing(border-box);
+
+/* Start Don't Overthink it Grids  */
+
+.grid{
+
+}
+
+.grid:after{
+  clear: both;
+  display: table;
+  content:"";
+}
+
+.col { 
+  display: inline-block; 
+  float: left; 
+  padding-left: 5px; 
+  padding-right: 5px;
+}
+.module{
+  margin:  5px;
+}
+.col1-1{ @extend .col; width: 100%; }
+.col1-2{ @extend .col; width: 50%; }
+.col1-3{ @extend .col; width: 33.333%; }
+.col2-3{ @extend .col; width: 66.666%; }
+.col1-4{ @extend .col; width: 25%; }
+.col3-4{ @extend .col; width: 75%;}
+.col1-5{ @extend .col; width: 20%; }
+.col1-6{ @extend .col; width: 16.6666666667%; }
+
+/* End Don't Overthink it Grids  */
+
+.thinFont{
+  font-family: "helvetica neue", helvetica, verdana, sans-serif;
+  letter-spacing: .1rem;
+  font-weight: 100;
+  margin: 0;
+  padding:0;
+}
+
+body{
+  @extend .thinFont;
+  background: $Estelaverda;
+font-family: 'Roboto', helvetica, verdana, sans-serif;
+}
+
+.page{
+  margin: 0 auto;
+  width: 80%;
+  color: white;
+}
+
+header{
+  h1{
+    font-family: 'Allan', cursive;
+    font-size: 60px;
+    display: inline-block;
+    margin: 25px 0 0 0;
+    position: relative;
+    &:before{
+      content: "";
+      background: url(img/halley-logo.png);
+      height: 26px;
+      width: 115px;
+      position: absolute;
+      top: - 10px;
+     
+    }
+  }
+   h2{
+    font-size: 12px;
+    display: inline-block;
+    color: rgba(255,255,255,.8);
+  }
+  h3{margin: 5px;
+    font-size: 14px;
+  
+  }
+}
+
+
+h1{
+   @extend .thinFont;
+}
+h2{
+   @extend .thinFont;
+}
+h3{
+   @extend .thinFont;
+}
+h4{
+   @extend .thinFont;
+}
+
+  .greenBtn{
+    outline: none;
+    font-size: 20px;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    background-color: darken($Estelaverda, 0%);
+    background: linear-gradient(darken($Estelaverda, 0%), darken($Estelaverda, 3%));
+    border: 1px solid darken($Estelaverda, 8%);
+    color: white;
+    text-shadow: #40936b 0 -1px 0;
+    &:hover{
+     background: linear-gradient(lighten($Estelaverda, 5%), lighten($Estelaverda, 0%));
+    }
+    &:active{
+      background: linear-gradient(darken($Estelaverda, 5%), darken($Estelaverda, 10%));
+    }
+  }
+
+
+  .circleBtn{
+    color: white;
+    background: darken($Estelaverda, 20%);
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    float: right;
+    padding: 5px 0 0 14px;
+    font-size: 20px;
+    cursor:pointer;
+    &:hover{
+      background: darken($Estelaverda, 0%);
+    }
+    &:active{
+      background: darken($Estelaverda, 30%);
+    }
+  }
+
+#showForm{
+  @extend .greenBtn;
+  float: right;
+  margin: 5px;
+}
+
+@import"_form";
+@import"_posts";
+@import"_sidebar";
+
+
+
+

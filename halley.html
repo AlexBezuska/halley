@@ -1,0 +1,44 @@
+<head>
+  <title>Halley - Blog engine for Node.js</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="grid">
+      {{> header}}
+    </header>
+
+    <div class="grid body">
+     
+         {{> posts}}
+
+        
+         {{> sidebar}}
+        
+    </div>
+
+    <footer>
+    </footer>
+
+  </div> <!-- .page -->
+</body>
+
+
+
+
+
+
+
+
+<template name="header">
+   <div class="col1-2">
+      <h1 class="logo">Halley</h1>
+      <h2>(hay - lee)</h2>
+      <h3>Blog engine for Node.js</h3>
+    </div> <!-- .col1.2 -->
+    <div class="col1-2">
+      <input type="submit" id="showForm" value="write!"/> 
+        {{> form}}
+      </div> <!-- .col1.2 -->
+</template>

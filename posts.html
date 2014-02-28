@@ -1,0 +1,43 @@
+<template name="posts">
+  <section class="content">
+
+  <h1 class="pageHeading">Posts</h1>
+    {{#each post}}
+    {{> post}}
+    {{/each}}
+  </section> <!-- .content -->
+</template>
+
+
+<template name="post">
+  <div class="onePost">
+
+    <a name="{{_id}}"></a>
+    
+    <h2 class="postTitle">{{title}}</h2>
+
+    <div class="postMeta"> 
+      Posted on <span class="postDate">{{date}}</span> 
+      by <span class="postAuthor">{{author}}</span>
+    </div>
+
+    <div class="postBody">{{body}}</div>
+
+    <div class="postFooter">
+      <div class="postCategoryHolder">
+        Posted in <span class="postTags">{{tags}}</span> 
+      </div>
+
+      <div class="postTagHolder">
+       Tagged <span class="postTags">{{tags}}</span>
+      </div>
+
+      <div class="postAuthorTools">
+        <a href="#" class="postEditButton">edit</a>
+        <a href="#" class="postDeleteButton">remove</a>
+      </div>
+
+    </div>
+    
+  </div>
+</template>

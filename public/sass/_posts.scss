@@ -1,0 +1,96 @@
+.content{
+@extend .col3-4;
+margin: 50px 0px;
+
+  .onePost{
+    border-top: 1px solid darken($Estelaverda, 5%);
+    border-left: 1px solid darken($Estelaverda, 5%);
+    border-right: 1px solid lighten($Estelaverda, 5%);
+    border-bottom: 1px solid lighten($Estelaverda, 5%);
+    background: darken($Estelaverda, 2%);
+    border-radius: 5px;
+    padding: 10px 15px 15px 15px;
+    margin: 10px;
+
+    .postTitle{
+      font-family: 'Roboto Slab', helvetica, verdana, sans-serif;
+      background: darken($Estelaverda, 5%);
+      width: intrinsic;
+      padding: 8px 12px;
+      margin: 0 0 8px 0;
+      left: -20px;
+      font-weight: 100;
+      position: relative;
+    }
+
+    .postMeta{
+      font-size: 13px;
+      .postDate{
+
+      } 
+      .postAuthor{
+
+      }
+    }
+
+    .postBody{
+      margin: 5px auto;
+      padding: 10px 0;
+       
+       font-size: 16px;
+line-height: 1.6em;
+font-weight: 200;
+      border-top: 1px solid rgba(255,255,255,.1);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .postFooter{
+       font-size: 13px;
+      .postCategoryHolder{
+        .postTags{
+
+        }
+      }
+
+      .postTagHolder{
+       .postTags{
+
+       }
+      }
+
+      .postAuthorTools{
+        text-align: right;
+        a{
+          position: relative;
+          font-size: 15px;
+          bottom: -7px;
+          text-decoration: none;
+          color: white;
+          background: darken($Estelaverda, 5%);
+          padding: 6px 12px;
+          border-radius: 5px 5px 0 0;
+            &:hover{
+     background: lighten($Estelaverda, 5%);
+    }
+    &:active{
+      background: darken($Estelaverda, 10%);
+    }
+        }
+       .postEditButton{
+
+       }
+       .postDeleteButton{
+
+       }
+      }
+    }
+    &:after{
+      clear: both;
+      display: table;
+      content:"";
+    }
+  }//onePost
+
+
+}//content
+
+  
