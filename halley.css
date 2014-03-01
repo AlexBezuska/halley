@@ -204,13 +204,15 @@ header h3 {
     border-radius: 5px;
     padding: 10px 15px 15px 15px;
     margin: 10px; }
-    .content .onePost .postTitle {
+    .content .onePost input[type="text"] {
+      font-family: helvetica, verdana, sans-serif;
       outline: none;
       border: 0px;
+      color: white !important;
+      background: transparent !important; }
+    .content .onePost .postTitle {
       font-size: 22px;
-      font-family: helvetica, verdana, sans-serif;
       background: #84b16f;
-      color: white;
       display: inline-block;
       color: rgba(255, 255, 255, 0.8);
       width: intrinsic;
@@ -229,7 +231,8 @@ header h3 {
       padding: 10px 0;
       background: transparent;
       border: 0px;
-      min-height: 200px;
+      resize: none;
+      min-height: 250px;
       font-size: 16px;
       width: 100%;
       color: white;

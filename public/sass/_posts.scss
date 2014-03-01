@@ -3,6 +3,17 @@
 margin: 30px 0px;
 
   .onePost{
+
+
+
+    input[type="text"]{
+         font-family:  helvetica, verdana, sans-serif;
+       outline: none;
+      border: 0px;
+      color: white !important;
+      background: transparent!important;
+    }
+
     border-top: 1px solid darken($Estelaverda, 5%);
     border-left: 1px solid darken($Estelaverda, 5%);
     border-right: 1px solid lighten($Estelaverda, 5%);
@@ -13,13 +24,14 @@ margin: 30px 0px;
     margin: 10px;
 
     .postTitle{
-      outline: none;
+      
        @extend .thinFont;
-      border: 0px;
+
+
       font-size: 22px;
-      font-family:  helvetica, verdana, sans-serif;
+     
       background: darken($Estelaverda, 5%);
-      color: white;
+      
    
     display: inline-block;
     color: rgba(255,255,255,.8);
@@ -49,8 +61,8 @@ margin: 30px 0px;
       padding: 10px 0;
        background: transparent;
        border: 0px;
-
-       min-height: 200px;
+resize: none;
+       min-height: 250px;
        font-size: 16px;
        width: 100%;
        color: white;
