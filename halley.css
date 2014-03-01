@@ -193,6 +193,13 @@ header h3 {
   display: inline-block;
   margin: 5px; }
 
+.crater, .content .onePost .postTitle, .content .onePost .postBody {
+  outline: none;
+  background: transparent !important;
+  border: 0px;
+  resize: none;
+  color: white; }
+
 .content {
   margin: 30px 0px; }
   .content .onePost {
@@ -204,38 +211,27 @@ header h3 {
     border-radius: 5px;
     padding: 10px 15px 15px 15px;
     margin: 10px; }
-    .content .onePost input[type="text"] {
-      font-family: helvetica, verdana, sans-serif;
-      outline: none;
-      border: 0px;
-      color: white !important;
-      background: transparent !important; }
     .content .onePost .postTitle {
       font-size: 22px;
       background: #84b16f;
       display: inline-block;
       color: rgba(255, 255, 255, 0.8);
-      width: intrinsic;
       padding: 8px 12px;
       margin: 0 0 8px 0;
       left: -20px;
       font-weight: 300;
-      position: relative; }
+      position: relative;
+      width: 100%; }
     .content .onePost .postMeta {
       font-size: 13px; }
     .content .onePost .postBody {
-      outline: none;
       font-family: 'Roboto', helvetica, verdana, sans-serif;
       margin: 5px auto;
       letter-spacing: .1rem;
       padding: 10px 0;
-      background: transparent;
-      border: 0px;
-      resize: none;
       min-height: 250px;
       font-size: 16px;
       width: 100%;
-      color: white;
       line-height: 1.6em;
       font-weight: 210;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -244,7 +240,8 @@ header h3 {
       font-size: 13px; }
       .content .onePost .postFooter .postAuthorTools {
         text-align: right; }
-        .content .onePost .postFooter .postAuthorTools a {
+        .content .onePost .postFooter .postAuthorTools .postDeleteButton {
+          cursor: pointer;
           position: relative;
           font-size: 15px;
           bottom: -7px;
@@ -253,9 +250,9 @@ header h3 {
           background: #84b16f;
           padding: 6px 12px;
           border-radius: 5px 5px 0 0; }
-          .content .onePost .postFooter .postAuthorTools a:hover {
+          .content .onePost .postFooter .postAuthorTools .postDeleteButton:hover {
             background: #a0c391; }
-          .content .onePost .postFooter .postAuthorTools a:active {
+          .content .onePost .postFooter .postAuthorTools .postDeleteButton:active {
             background: #76a85f; }
     .content .onePost:after {
       clear: both;

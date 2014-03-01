@@ -5,11 +5,11 @@ if (Meteor.isClient) {
   /* Load database content */
    Template.posts.post = function (){
       return Blog.find( {}, { sort :{"dateTimeStamp": -1}} );
-   }
+   };
 
   Template.sidebar.postTitle = function (){
       return Blog.find( {}, { sort :{"dateTimeStamp": -1}} );
-   }
+   };
 
  /* tools */
   var putDate = function (){ 
@@ -18,6 +18,9 @@ if (Meteor.isClient) {
            mm = today.getMonth()+1,
          yyyy = today.getFullYear();
     return mm +"."+ dd  +"."+ yyyy; 
+  };
+  function formToggle (){
+    $('.form').toggle();
   };
 
   Template.form.events({
@@ -38,28 +41,32 @@ if (Meteor.isClient) {
         });
 
         title.val('');
-        body.text('');
+        body.val('');
         tags.val('');
+        formToggle();
+
       }
   });
 
   Template.header.events({
     'click #showForm' : function () {
-      $('.form').toggle();
+      formToggle();
     },
     'click #exitForm' : function () {
-      $('.form').toggle();
+      formToggle();
     }
   });
 
   Template.post.events({
+    
     'blur .editable' : function () {
     var target = event.currentTarget.value;
     var field = event.currentTarget.name;
     var obj = {};
         obj[field] = target;
     Blog.update( { _id: this._id },{ $set: obj } );
-  });
+   },
+ 
 
   'click .postDeleteButton' : function () {
       var removing = confirm("Are you sure you want to remove this entry? Action cannot be undone.");
@@ -70,4 +77,6 @@ if (Meteor.isClient) {
         return false;
       }
     }
+    
+  });
 } // is client

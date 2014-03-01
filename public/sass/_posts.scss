@@ -1,19 +1,18 @@
+.crater{
+  outline: none;
+  background: transparent !important;
+  border: 0px;
+  resize: none;
+  color: $textcolor;
+}
+
+
+
 .content{
 @extend .col3-4;
 margin: 30px 0px;
 
   .onePost{
-
-
-
-    input[type="text"]{
-         font-family:  helvetica, verdana, sans-serif;
-       outline: none;
-      border: 0px;
-      color: white !important;
-      background: transparent!important;
-    }
-
     border-top: 1px solid darken($Estelaverda, 5%);
     border-left: 1px solid darken($Estelaverda, 5%);
     border-right: 1px solid lighten($Estelaverda, 5%);
@@ -24,23 +23,18 @@ margin: 30px 0px;
     margin: 10px;
 
     .postTitle{
-      
-       @extend .thinFont;
-
-
+      @extend .crater;
+      @extend .thinFont;
       font-size: 22px;
-     
       background: darken($Estelaverda, 5%);
-      
-   
-    display: inline-block;
-    color: rgba(255,255,255,.8);
-      width: intrinsic;
+      display: inline-block;
+      color: rgba(255,255,255,.8);
       padding: 8px 12px;
       margin: 0 0 8px 0;
       left: -20px;
       font-weight: 300;
       position: relative;
+      width: 100%;
     }
 
     .postMeta{
@@ -54,20 +48,16 @@ margin: 30px 0px;
     }
 
     .postBody{
-      outline: none;
+      @extend .crater;
       font-family: 'Roboto', helvetica, verdana, sans-serif;
       margin: 5px auto;
       letter-spacing: .1rem;
       padding: 10px 0;
-       background: transparent;
-       border: 0px;
-resize: none;
-       min-height: 250px;
-       font-size: 16px;
-       width: 100%;
-       color: white;
-line-height: 1.6em;
-font-weight: 210;
+      min-height: 250px;
+      font-size: 16px;
+      width: 100%;
+      line-height: 1.6em;
+      font-weight: 210;
       border-top: 1px solid rgba(255,255,255,.1);
       border-bottom: 1px solid rgba(255,255,255,.1);
     }
@@ -87,7 +77,9 @@ font-weight: 210;
 
       .postAuthorTools{
         text-align: right;
-        a{
+        
+       .postDeleteButton{
+          cursor: pointer;
           position: relative;
           font-size: 15px;
           bottom: -7px;
@@ -96,18 +88,12 @@ font-weight: 210;
           background: darken($Estelaverda, 5%);
           padding: 6px 12px;
           border-radius: 5px 5px 0 0;
-            &:hover{
-     background: lighten($Estelaverda, 5%);
-    }
-    &:active{
-      background: darken($Estelaverda, 10%);
-    }
-        }
-       .postEditButton{
-
-       }
-       .postDeleteButton{
-
+          &:hover{
+            background: lighten($Estelaverda, 5%);
+          }
+          &:active{
+            background: darken($Estelaverda, 10%);
+          }
        }
       }
     }
@@ -120,5 +106,7 @@ font-weight: 210;
 
 
 }//content
+
+
 
   
