@@ -48,7 +48,16 @@ Template.header.events({
   });
 
   Template.post.events({
-    'click .postDeleteButton' : function () {
+    'blur .editable' : function () {
+    var target = event.currentTarget.value;
+    var field = event.currentTarget.name;
+    var obj = {};
+        obj[field] = target;
+    Blog.update( { _id: this._id },{ $set: obj } );
+   
+  },
+
+  'click .postDeleteButton' : function () {
       var removing = confirm("Are you sure you want to remove this entry? Action cannot be undone.");
       if (removing){
         Blog.remove({_id: this._id});
@@ -80,5 +89,16 @@ Template.header.events({
       );
    }
 
+ Template.post.rendered = function(){
+  document.addEventListener('DOMContentLoaded', function() {
+   $('textarea').autoResize();
+});
+    
 
+
+  }
+ 
 }
+
+
+ 

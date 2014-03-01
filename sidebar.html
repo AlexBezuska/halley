@@ -1,11 +1,11 @@
 <template name="sidebar">
   <section class="sidebar">
     <div class="recentPosts module">
-      <ul>
+   
         {{#each postTitle}}
           {{> postTitle}}
         {{/each }}
-     </ul>
+     
     </div>
   </section>
 </template>
@@ -15,7 +15,7 @@
 
 
 <template name="postTitle">
-  <li>
-    <a href="#{{_id}}" class="postTitle">{{title}}</a>
-  </li>
+
+    <a class='recentPostTitle' href="#{{_id}}" >{{title}}</a>
+
 </template>

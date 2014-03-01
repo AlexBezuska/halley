@@ -13,15 +13,15 @@
   <div class="onePost">
 
     <a name="{{_id}}"></a>
-    
-    <h2 class="postTitle">{{title}}</h2>
+
+    <input type="text" class="postTitle editable" name="title" value="{{title}}"></input>
 
     <div class="postMeta"> 
       Posted on <span class="postDate">{{date}}</span> 
       by <span class="postAuthor">{{author}}</span>
     </div>
 
-    <div class="postBody">{{body}}</div>
+    <textarea class="postBody editable" name="body" >{{body}}</textarea>
 
     <div class="postFooter">
       <div class="postCategoryHolder">
